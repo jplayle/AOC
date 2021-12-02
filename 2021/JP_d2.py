@@ -1,3 +1,10 @@
+# not exactly computationally efficient but does make the final calculation a nice one-liner:
+F = sum([int(l.split(" ")[1]) for l in txt.split("\n") if "forward" in l])
+U = sum([int(l.split(" ")[1]) for l in txt.split("\n") if "down" in l])
+D = sum([int(l.split(" ")[1]) for l in txt.split("\n") if "up" in l])
+print(F * (U - D))
+
+
 """ ¯\_(ツ)_/¯ """
 fwd, dep1, dep2 = 0, 0, 0
 
