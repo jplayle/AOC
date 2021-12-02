@@ -1,5 +1,25 @@
+""" ¯\_(ツ)_/¯ """
+fwd, dep1, dep2 = 0, 0, 0
 
+def u(n):
+    global dep1
+    dep1 -= n
+def d(n):
+    global dep1
+    dep1 += n
+def f(n):
+    global fwd, dep2
+    fwd  += n
+    dep2 += n * dep1
+    
+func_map = {"up": u, "down": d, "forward": f}
 
+for t in txt.split("\n"):
+    inp = t.split(" ")
+    func_map[inp[0]](int(inp[1]))
+    
+print(fwd * dep1)
+print(fwd * dep2) 
 
 
 
