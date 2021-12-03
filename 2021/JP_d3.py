@@ -1,25 +1,14 @@
-
-
-""" FIRST PASS - INITIAL SOLUTION """
-counts = {n: {"1": 0, "0":0} for n in range(12)}
+txt = """"""
 
 numbers = txt.split("\n")
 
-for l in numbers:
-    for n in range(12):
-        counts[n][l[n]] += 1
-        
-gamma   = ""
-epsilon = ""
-for i, c in counts.items():
-    if c["1"] > c["0"]:
-        gamma   += "1"
-        epsilon += "0"
-    else:
-        gamma   += "0"
-        epsilon += "1"
-        
-print(int(gamma, 2) * int(epsilon, 2))
+
+""" PART 1 """
+g = int("".join(["1" if y > 0 else "0" for y in [sum([1 if x == "1" else -1 for x in [n[pos] for n in numbers]]) for pos in range(12)]]), 2)
+e = int("".join(["1" if y < 0 else "0" for y in [sum([1 if x == "1" else -1 for x in [n[pos] for n in numbers]]) for pos in range(12)]]), 2)
+
+print(g * e)
+
 
 """ PART 2 """
 def oxygen_rating(pos, number_list):
