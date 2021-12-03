@@ -35,4 +35,4 @@ def co2_scrubber(pos, num_list):
         
     return c_s
         
-print(int(oxygen_rating(0, numbers), 2) * int(CO2_scrubber(0, numbers), 2))
+print(int(oxygen_rating(0, numbers), 2) * int(co2_scrubber(0, numbers), 2))
