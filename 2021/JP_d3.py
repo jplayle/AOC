@@ -23,15 +23,15 @@ def oxygen_rating(pos, number_list):
         
     return o_r
     
-def CO2_scrubber(pos, num_list):
+def co2_scrubber(pos, num_list):
     if len(num_list) == 1:
         return num_list[0]
     ones  = [n for n in num_list if n[pos] == "1"]
     zeros = [n for n in num_list if n[pos] == "0"]
     if len(ones) < len(zeros):
-        c_s = CO2_scrubber(pos + 1, ones)
+        c_s = co2_scrubber(pos + 1, ones)
     else:
-        c_s = CO2_scrubber(pos + 1, zeros)
+        c_s = co2_scrubber(pos + 1, zeros)
         
     return c_s
         
