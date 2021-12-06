@@ -7,9 +7,7 @@ prev_lft = lf_timers
 for n in range(256):
     if n == 80:
         print("Part 1 =", sum([y for x, y in prev_lft.items()]))
-    next_lft = {}
-    for x in range(8):
-        next_lft[x] = prev_lft[x+1]
+    next_lft     = {x: prev_lft[x+1] for x in range(8)} 
     next_lft[6] += prev_lft[0]
     next_lft[8]  = prev_lft[0]
     prev_lft     = next_lft
