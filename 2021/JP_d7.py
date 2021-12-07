@@ -4,7 +4,7 @@ positions = [int(p) for p in positions.split(",")]
 
 S = lambda n : int((n / 2) * (1 + n))
 
-p1_min_fuel = min([sum([abs(i - j) for j in positions if j != i]) for i in positions])
+p1_min_fuel = min([sum([  abs(i - j) for j in positions if j != i])  for i in range(max(positions))])
 p2_min_fuel = min([sum([S(abs(i - j)) for j in positions if j != i]) for i in range(max(positions))])
 
 print(p1_min_fuel)
