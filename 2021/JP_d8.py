@@ -10,17 +10,17 @@ print(p1)
 def seg_to_num(seg_list1=""):
 	# matches the segments that are lit to a corresponding number
 	seg_num_map = {
-					"0": "t,tr,br,b,bl,tl",
-					"1": "tr,br",
-					"2": "t,tr,m,bl,b",
-					"3": "t,tr,m,br,b",
-					"4": "tl,m,tr,br",
-					"5": "t,tl,m,br,b",
-					"6": "t,tl,m,bl,br,m",
-					"7": "t,tr,br",
-					"8": "t,tr,tl,m,br,bl,b",
-					"9": "t,tr,tl,m,br,b"
-					}
+			"0": "t,tr,br,b,bl,tl",
+			"1": "tr,br",
+			"2": "t,tr,m,bl,b",
+			"3": "t,tr,m,br,b",
+			"4": "tl,m,tr,br",
+			"5": "t,tl,m,br,b",
+			"6": "t,tl,m,bl,br,m",
+			"7": "t,tr,br",
+			"8": "t,tr,tl,m,br,bl,b",
+			"9": "t,tr,tl,m,br,b"
+			}
 					
 	for int_str, seg_list2 in seg_num_map.items():
 		n_seg_list1 = len(seg_list1.split(","))
